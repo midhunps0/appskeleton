@@ -25,7 +25,11 @@
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Ynotz\\AccessControl\\": "modules/Ynotz/AccessControl/src/",
+            "Ynotz\\SmartPages\\": "modules/Ynotz/SmartPages/src/",
+            "Ynotz\\EasyAdmin\\": "modules/Ynotz/EasyAdmin/src/",
+            "Ynotz\\MediaManager\\": "modules/Ynotz/MediaManager/src/"
         }
     },
     "autoload-dev": {
