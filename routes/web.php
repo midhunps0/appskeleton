@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use Ynotz\EasyAdmin\Services\RouteHelper;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,14 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::group(
+    ['middleware' => ['auth'], 'prefix' => 'admin'],
+    function () {
+        RouteHelper::getEasyRoutes(modelName: "User");
+        RouteHelper::getEasyRoutes(modelName: "Role");
+        RouteHelper::getEasyRoutes(modelName: "Permission");
+    }
+);
 
 require __DIR__.'/auth.php';

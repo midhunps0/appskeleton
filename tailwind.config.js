@@ -15,7 +15,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
-            },,
+            },
             minWidth: {
                 '1': '.25rem',
                 '2': '.5rem',

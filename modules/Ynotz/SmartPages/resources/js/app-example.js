@@ -6,6 +6,7 @@ import page from '@/components/page';
 import utils from '@/components/utils';
 import progressbar from '@/components/progressbar';
 
+
 Alpine.plugin(persist)
 
 window.Alpine = Alpine;
